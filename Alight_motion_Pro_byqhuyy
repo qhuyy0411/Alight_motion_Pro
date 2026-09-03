@@ -1,0 +1,20 @@
+# ============================================
+# Author: #qhuyy
+# Profile: Alight Motion Member Config
+# ============================================
+
+[General]
+bypass-system = true
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/4, 255.255.255.255/32
+
+[MITM]
+hostname = us-central1-alight-creative.cloudfunctions.net
+
+[Script]
+# #qhuyy - Script Alight Motion Pro
+AlightMotion_Pro = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,script-path=https://raw.githubusercontent.com/qhuyy0411/Alight_motion_Pro/refs/heads/main/js,requires-body=true,max-size=131072,timeout=10
+
+[URL Rewrite]
+# #qhuyy - Chặn máy chủ quảng cáo Alight Motion
+^https?:\/\/.*alightcreative\.com\/.*\/ads\/ reject
