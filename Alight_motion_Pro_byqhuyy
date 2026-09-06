@@ -13,7 +13,7 @@ hostname = us-central1-alight-creative.cloudfunctions.net, *.alightcreative.com,
 
 [Script]
 # #qhuyy - Script Alight Motion Pro
-AlightMotion_Pro = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,script-path=https://raw.githubusercontent.com/qhuyy0411/Alight_motion_Pro/refs/heads/main/js,requires-body=true,max-size=131072,timeout=10
+AlightMotion_Pro = type=http-response,pattern=^https?:\/\/.*alight.*\/getAccountStatusAndLicenses,script-path=https://raw.githubusercontent.com/qhuyy0411/Alight_motion_Pro/refs/heads/main/js,requires-body=true,max-size=131072,timeout=10
 
 [URL Rewrite]
 # #qhuyy - Chặn máy chủ quảng cáo Alight Motion
